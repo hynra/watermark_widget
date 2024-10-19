@@ -2,7 +2,7 @@
 
 A simple Flutter package for adding customizable watermarks to widgets.
 
-
+![demo](https://raw.githubusercontent.com/hynra/watermark_widget/refs/heads/master/ss.jpeg)
 
 ## Features
 
@@ -38,33 +38,30 @@ WatermarkWidget(
 
 ## Tips for Configuration
 
-1. **Text**: Choose a short, clear text that represents your watermark purpose (e.g., "CONFIDENTIAL", "DRAFT", company name).
+1. **Opacity**: Start with a low opacity (0.1 to 0.3) to make the watermark visible but not distracting. Adjust as needed.
 
-2. **Opacity**: Start with a low opacity (0.1 to 0.3) to make the watermark visible but not distracting. Adjust as needed.
+2. **Color**: Choose a color that contrasts with your content but isn't too jarring. Light gray often works well for dark backgrounds, and dark gray for light backgrounds.
 
-3. **Color**: Choose a color that contrasts with your content but isn't too jarring. Light gray often works well for dark backgrounds, and dark gray for light backgrounds.
-
-4. **Rotation Angle**:
+3. **Rotation Angle**:
     - The angle is in radians.
     - Common values:
         - -0.5 radians ≈ -28.6 degrees
         - -0.25 radians ≈ -14.3 degrees
     - Experiment to find the right balance between readability and aesthetics.
 
-5. **Font Size**:
+4. **Font Size**:
     - Adjust based on the size of your child widget.
     - Larger widgets generally need larger font sizes.
     - Start with 10-20% of the smaller dimension of your child widget.
 
-6. **Intervals**:
+5. **Intervals**:
     - `horizontalInterval` and `verticalInterval` control the density of watermarks.
     - Start with values around 50-100% of your child widget's dimensions.
     - Smaller intervals create a denser watermark pattern.
     - Larger intervals create a sparser pattern.
 
-7. **Performance**: Be mindful that very small intervals or very large font sizes can impact performance, especially on large widgets.
+6. **Performance**: Be mindful that very small intervals or very large font sizes can impact performance, especially on large widgets.
 
-8. **Testing**: Always test your watermark on various screen sizes to ensure it looks good across devices.
 
 ## Installation
 
@@ -116,4 +113,4 @@ This example creates a watermark with "CONFIDENTIAL" text, slightly rotated, wit
 
 ## Additional Information
 
-For more examples and usage scenarios, please refer to the example in the `example` directory of this package.
+For more examples and usage scenarios, please refer to the example in the `example` directory.
