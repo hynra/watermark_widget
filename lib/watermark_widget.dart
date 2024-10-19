@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class WatermarkWidget extends StatelessWidget {
-
   static const Key watermarkKey = Key('watermark_custom_paint');
   final Widget child;
   final String text;
@@ -70,9 +69,6 @@ class _WatermarkPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color.withOpacity(opacity)
-      ..style = PaintingStyle.fill;
 
     final textStyle = TextStyle(
       color: color.withOpacity(opacity),
@@ -88,11 +84,14 @@ class _WatermarkPainter extends CustomPainter {
     textPainter.layout();
 
     for (double i = -size.height; i < size.height * 2; i += verticalInterval) {
-      for (double j = -size.width; j < size.width * 2; j += horizontalInterval) {
+      for (double j = -size.width;
+          j < size.width * 2;
+          j += horizontalInterval) {
         canvas.save();
         canvas.translate(j, i);
         canvas.rotate(rotationAngle);
-        textPainter.paint(canvas, Offset(-textPainter.width / 2, -textPainter.height / 2));
+        textPainter.paint(
+            canvas, Offset(-textPainter.width / 2, -textPainter.height / 2));
         canvas.restore();
       }
     }

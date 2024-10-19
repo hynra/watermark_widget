@@ -32,7 +32,8 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Small Container Example:', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text('Small Container Example:',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             WatermarkWidget(
               text: 'DEMO',
@@ -50,7 +51,8 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            const Text('Large Container Example:', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const Text('Large Container Example:',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             WatermarkWidget(
               text: 'WATERMARK',

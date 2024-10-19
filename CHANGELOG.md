@@ -1,3 +1,7 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Add watermark to any widget
+
+* Customize text, color, opacity, and rotation
+
+* Control the spacing and size of watermark text
